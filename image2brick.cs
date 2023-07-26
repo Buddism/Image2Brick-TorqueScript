@@ -61,12 +61,6 @@ function makeBrickList()
 
 	setClipboard(%list);
 }
-	
-$i2b_chrdata = "";
-for(%i = 1; %i < 255; %i++)
-	$i2b_chrdata = $i2b_chrdata @ collapseEscape("\\x" @ getSubStr("0123456789ABCDEF", %i >> 4, 1) @ getSubStr("0123456789ABCDEF", %i & 0xF, 1));
-$i2b_alphaChar = collapseEscape("\xFF");
-
 
 function lazy_build(%string, %alt)
 {
